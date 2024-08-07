@@ -50,14 +50,7 @@ for (int i = 0;i < m; i++)
 }
 
 
-static int GetVolume(string source)
-{
-    var result = 0;
-    foreach (var item in source)
-        result += Convert.ToInt32(item);
-
-    return result;
-}
+static int GetVolume(string source) => source.Sum(Convert.ToInt32);
 
 static bool CheckSwapTwoCharacters(string firstString, string secondString)
 {
